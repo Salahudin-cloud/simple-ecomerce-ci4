@@ -11,11 +11,11 @@ Installation :
 -------
 1. clone this project and place in **`htdoc`**
 2. after that open the folder project and open folder database 
-3. import the database 
+3. open xampp and activited mysql with apache  after that import the database 
 4. open your IDE and navigate to : `app/Config/Boot/Database.php`
 
 ### config the database like this : 
 
 ![config_database](https://user-images.githubusercontent.com/69721453/232978249-6a7e8a5e-21ae-4256-b3e0-7ae2821b4283.jpg)
 
-5. you ready to go 
+5. you can run the project 
