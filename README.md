@@ -1,5 +1,5 @@
 # Simple E Comerce with CodeIgniter 4
-This is Project i created to submit project mid term , the topic project mid term is about **E Comerce and Marketplace** , the student can choose between E Comerce or Markteplace and i choose E Comerce , so i created this project with CodeIgniter 4. this project E Comerce is about My Father Store 
+This is Project i created to submit project mid term , the topic project mid term is about **E Comerce and Marketplace** , the student can choose between E Comerce or Markteplace and i choose E Comerce , so i created this project with CodeIgniter 4. this project E Comerce is about My Father Store. and this porject still lots need to imporove like the ui , security , buy system and so on  
 
 Prerequisites
 =======
@@ -19,3 +19,5 @@ Installation :
 ![config_database](https://user-images.githubusercontent.com/69721453/232978249-6a7e8a5e-21ae-4256-b3e0-7ae2821b4283.jpg)
 
 5. you can run the project 
+
+
