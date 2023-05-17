@@ -3,7 +3,7 @@ This is Project i created to submit project mid term , the topic project mid ter
 
 Prerequisites
 =======
-Dependencies :
+Tools :
 -------
 * [XAMPP](https://www.apachefriends.org/download.html) 
 
