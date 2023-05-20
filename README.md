@@ -10,10 +10,10 @@ Tools :
 Installation :
 -------
 1. clone this project and place in **`htdoc`**
-2. after that open the folder project and open folder database 
-3. open xampp and activited mysql with apache  after that import the database 
-4. open the folder project and type  `composer install`
-5. open your IDE and navigate to : `app/Config/Boot/Database.php` and config the database like this :
+3. open folder database 
+4. open xampp and activited mysql with apache  after that import the database 
+5. open the folder project (NOTE : You can rename the folder name project whatever you want ) and type  `composer install`
+6. open your IDE and navigate to : `app/Config/Boot/Database.php` and meke sure the config  database like this :
 ```
   public array $default = [
     'DSN'      => '',
@@ -36,5 +36,7 @@ Installation :
   ];
 ```
 5. now you can run the project 
+
+
 
 
