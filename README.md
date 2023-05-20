@@ -52,8 +52,34 @@ Problems with it can be raised on our forum, or as issues in the main repository
 
 PHP version 7.4 or higher is required, with the following extensions installed:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Installation :
+-------
+1. clone this project and place in **`htdoc`**
+2. after that open the folder project and open folder database 
+3. open xampp and activited mysql with apache  after that import the database 
+4. open your IDE and navigate to : `app/Config/Boot/Database.php` and config the database like this :
+```
+  public array $default = [
+    'DSN'      => '',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'umkm',
+    'DBDriver' => 'MySQLi',
+    'DBPrefix' => '',
+    'pConnect' => false,
+    'DBDebug'  => true,
+    'charset'  => 'utf8',
+    'DBCollat' => 'utf8_general_ci',
+    'swapPre'  => '',
+    'encrypt'  => false,
+    'compress' => false,
+    'strictOn' => false,
+    'failover' => [],
+    'port'     => 3306,
+  ];
+```
+5. now you can run the project 
 
 Additionally, make sure that the following extensions are enabled in your PHP:
 
