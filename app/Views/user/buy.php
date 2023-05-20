@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>User Manager</title>
+  <title>List Item </title>
 
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('/logout'); ?>">Logout</a>
-          </li>
+          </li>-3
         </ul>
       </div>
     </div>
@@ -45,47 +45,55 @@
 
   <!-- Content -->
   <div class="container mt-3">
-    <h1>User Dashboard</h1>
-    <p>This is a User Dashboard.</p>
-
-    <div class="table-responsive">
-      <table class="table table-striped mt-2">
-        <thead class="thead table-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $i = 1; ?>
+    <h1>List Of Item</h1>
+    <p>This is a List an Items.</p>
+    <?php $i = 1; ?>
+    <section>
+      <div class="container py-5">
+        <div class="row">
           <?php foreach ($products as $product) : ?>
             <?php if ($product->stock <= 0) : ?>
-              <tr>
-                <th scope="row"><?php echo $i++; ?></th>
-                <td><?php echo $product->product_name;  ?></td>
-                <td>Sold Out</td>
-                <td>IDR.<?php echo $product->price ?></td>
-                <td>
-                  <a href="" class="btn btn-success">Update</a>
-                  <a href="" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
+              <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="d-flex justify-content-between p-3">
+                    <p class="lead mb-0">Item <?php echo $i++; ?></p>
+                  </div>
+
+                  <div class="card-body">
+
+                    <div class="d-flex justify-content-between mb-3">
+                      <h5 class="mb-0"><?php echo $product->product_name;  ?></h5>
+                      <h5 class="text-dark mb-0">IDR.<?php echo $product->price; ?></h5>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-2">
+                      <p class="text-muted mb-0">Sold Out</p>
+                    </div>
+                    <a href="<?php echo site_url('buy/menu'); ?>" class="btn btn-success ">Buy</a>
+                  </div>
+                </div>
+                <a href="<?php echo site_url('buy/menu'); ?>" class="btn btn-success btn-disable ">Buy</a>
+              </div>
             <?php else : ?>
-              <tr>
-                <th scope="row"><?php echo $i++; ?></th>
-                <td><?php echo $product->product_name;  ?></td>
-                <td><?php echo $product->stock; ?></td>
-                <td>IDR.<?php echo $product->price; ?></td>
-              </tr>
+              <div class="col-md-3">
+                <div class="card ">
+                  <img src="<?php echo base_url() . '/assets/img/bottle-water.jpg' ?>" class="card-img-top" alt="Product 1">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo $product->product_name; ?></h5>
+                    <p class="card-text">Price: IDR.<?php echo $product->price ?></p>
+                    <p class="card-text">Available Stock: <?php echo $product->stock ?></p>
+                    <a href="#" class="btn btn-success">Buy Now</a>
+                  </div>
+                </div>
+              </div>
             <?php endif; ?>
           <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
 
-        </tbody>
-      </table>
-    </div>
-    <a href="<?php echo site_url('buy/menu'); ?>" class="btn btn-success">Buy</a>
+
+
   </div>
 
 

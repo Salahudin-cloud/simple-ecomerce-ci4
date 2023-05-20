@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2023 at 03:23 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: May 17, 2023 at 08:55 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,7 @@ CREATE TABLE `delivery` (
   `quantity` int(11) NOT NULL,
   `total` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'Being Processed'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `delivery`
@@ -74,7 +74,7 @@ CREATE TABLE `products` (
   `product_name` varchar(255) DEFAULT NULL,
   `stock` int(5) DEFAULT NULL,
   `price` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
@@ -97,7 +97,7 @@ CREATE TABLE `stock` (
   `date` varchar(255) NOT NULL,
   `product_name` varchar(255) NOT NULL,
   `quantity` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `stock`
@@ -136,7 +136,7 @@ CREATE TABLE `transaction` (
   `total` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'Being Processed',
   `username` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `transaction`
@@ -181,7 +181,7 @@ CREATE TABLE `users` (
   `phone` varchar(255) NOT NULL,
   `password` varchar(50) NOT NULL,
   `role` varchar(10) NOT NULL DEFAULT 'user'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`

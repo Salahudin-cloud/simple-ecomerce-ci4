@@ -100,6 +100,7 @@ class User extends BaseController
     $data['products'] = $this->productModel->getAllProducts();
     return view('user/buy_menu', $data);
   }
+  
   public function transactionPage()
   {
     $session = session();

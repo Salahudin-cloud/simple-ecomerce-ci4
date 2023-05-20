@@ -16,7 +16,8 @@ class Home extends BaseController
 
   public function home()
   {
-    return view('index');
+    $data['products'] = $this->productModel->getAllProducts();
+    return view('index', $data);
   }
 
 }
