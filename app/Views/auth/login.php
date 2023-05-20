@@ -1,4 +1,9 @@
+<?php
 
+$session = session();
+$alert = $session->getFlashdata('error');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +23,13 @@
             <h3 class="text-center">Login</h3>
           </div>
           <div class="card-body">
+            <?php
+            if ($alert === 'failed') {
+              echo "<div class='alert alert-danger font-weight-bold text-center'>
+              Please check your account and try again
+            </div>";
+            }
+            ?>
             <form method="post" action="<?php echo base_url('auth/login') ?>">
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>

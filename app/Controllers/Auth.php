@@ -64,6 +64,7 @@ class Auth extends BaseController
           return view('user/user_dashboard', $data);
         }
       } else {
+        $session->setFlashdata('error', 'failed');
         return redirect()->to('login');
       }
     }

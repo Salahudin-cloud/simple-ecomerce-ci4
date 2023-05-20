@@ -63,10 +63,8 @@ $routes->get('profile', 'User::profilePage');
 // $routes->get('', '');
 
 $routes->get('get-price/(:any)', 'User::getPrice/$1');
-
 $routes->get('/logout', 'Auth::logout');
 $routes->post('/register/process', 'Auth::registerProcess');
-
 $routes->put('/menu/edit_profile/update/process', 'User::updateProfileProcess');
 
 

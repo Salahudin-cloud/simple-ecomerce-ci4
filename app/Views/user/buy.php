@@ -72,7 +72,7 @@
                     <h5 class="card-title"><?php echo $product->product_name; ?></h5>
                     <p class="card-text">Price: IDR.<?php echo $product->price ?></p>
                     <p class="card-text">Available Stock: <?php echo $product->stock ?></p>
-                    <a href="#" class="btn btn-success">Buy Now</a>
+                    <a href="<?php echo site_url('buy/menu') ?>" class="btn btn-success">Buy Now</a>
                   </div>
                 </div>
               </div>
